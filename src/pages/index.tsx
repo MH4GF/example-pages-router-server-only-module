@@ -7,7 +7,7 @@ import { foo } from '@/client-only-module'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({ foo }) {
+export default function Home() {
   console.log({ foo })
   return (
     <>
@@ -114,12 +114,4 @@ export default function Home({ foo }) {
       </main>
     </>
   )
-}
-
-export const getServerSideProps = () => {
-  return {
-    props: {
-      foo
-    }
-  }
 }
